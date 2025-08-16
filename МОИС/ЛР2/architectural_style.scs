@@ -1,0 +1,64 @@
+nrel_architectural_style 
+	=> nrel_main_idtf: [architectural style*] (* <- lang_en;; *); [архитектурный стиль*] (* <- lang_ru;; *);
+	=> nrel_first_domain: concept_building;
+	=> nrel_second_domain: concept_architectural_style;
+	=> nrel_scope_of_definition: ... (*  
+		<= nrel_unification: ... (* 
+			<- sc_node_tuple;;
+			-> concept_architectural_style;;
+			-> concept_building;;
+		*);;
+	*);
+	<- rrel_investigated_relation: subject_domain_of_architecture;
+	
+	<- rrel_key_sc_element: ... (*
+		<= nrel_using_constants: ... (*
+			<- sc_node_tuple;;
+			-> concept_building;;
+			-> concept_form;;
+			-> concept_classification;;
+			-> concept_size;;
+			-> concept_material;;
+		*);;
+		<- definition;;
+		=> nrel_main_idtf: [Def. architectural style] (* <- lang_en;; *);;
+		<= nrel_sc_text_translation: ... (*
+			-> rrel_example: [a classification of buildings based on a set of characteristics and features, including overall appearance, arrangement of the components, method of construction, building materials used, form, size, structural design, and regional character] (* <- lang_en;; *);;
+		*);;
+	*);
+	
+	
+	<- rrel_key_sc_element: ... (*
+		<= nrel_using_constants: ... (*
+			<- sc_node_tuple;;
+			-> concept_building;;
+			-> concept_time;;
+		*);;
+		<- statement;;
+		=> nrel_main_idtf: [Утв. архитектурный стиль] (* <- lang_ru;; *);;
+		<= nrel_sc_text_translation: ... (*
+			-> rrel_example: [если совокупность деталей сооружения указывает на время его постройки, то это архитектурный стиль] (* <- lang_ru;; *);;
+		*);;
+	*);;
+		
+
+Wells_Cathedral
+	<- concept_building;
+	=> nrel_architectural_style: gothic (*<- concept_architectural_style;;*);
+	<- concept_temple;;
+
+Luxembourg_Palace
+	<- concept_building;
+	=> nrel_architectural_style: baroque (*<- concept_architectural_style;;*);;
+
+Sydney_Opera_House
+	<- concept_building;
+	=> nrel_architectural_style: modern (*<- concept_architectural_style;;*);;
+	
+relation 
+	=> binary_relation (* 
+		=> nrel_inclusion: symmetric_relation (* -|> nrel_architectural_style;; *);; 
+		=> nrel_inclusion: transitive_relation (* -|> nrel_architectural_style;; *);;
+		=> nrel_inclusion: antireflecsive_relation (* -> nrel_architectural_style;; *);; 
+		*);
+	=> oriented_relation (* -> nrel_architectural_style;; *);;

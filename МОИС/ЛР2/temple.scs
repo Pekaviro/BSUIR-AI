@@ -1,0 +1,88 @@
+subject_domain -> subject_domain_of_architecture;;
+concept_building -> nrel_inclusion: concept_temple;;
+
+concept_temple
+	<- subject_domain_of_architecture;
+	
+	<= nrel_subdividing: 
+		... (*
+			<- sc_node_tuple;;
+			-> concept_syenite_temple;;
+			-> concept_wooden_temple;;
+			-> concept_brick_temple;;
+			-> concept_limestone_temple;;
+			-> concept_stone_temple;;
+			-> concept_sandstone_temple;;
+			-> concept_granite_temple;;
+		*);
+	
+	<= nrel_subdividing: 
+		... (*
+			<- sc_node_tuple;;
+			-> concept_active_temple;;
+			-> concept_inactive_temple;;
+		*);
+
+	<= nrel_subdividing: 
+		... (*
+			<- sc_node_tuple;;
+			-> concept_egyptian_temple;;
+			-> concept_greko_roman_temple;;
+			-> concept_hindu_temple;;
+			-> concept_buddhist_temple;;
+			-> concept_sikh_temple;;
+			-> concept_jain_temple;;
+			-> concept_taoist_temple;;
+			-> concept_shinto_temple;;
+			-> concept_confucian_temple;;
+		*);	
+	
+	
+	<- rrel_key_sc_element: ... (*
+		<= nrel_using_constants: ... (*
+			<- sc_node_tuple;;
+			-> concept_building;;
+			-> concept_rituals;;			
+		*);;
+		<- definition;;
+		=> nrel_main_idtf: [Def. temple] (* <- lang_en;; *);;
+		<= nrel_sc_text_translation: ... (*
+			-> rrel_example: [place of worship, a building used for spiritual rituals and activities such as prayer and sacrifice] (* <- lang_en;; *);;
+		*);;
+	*);
+	
+	
+	<- rrel_key_sc_element: ... (*
+		<= nrel_using_constants: ... (*
+			<- sc_node_tuple;;
+			-> concept_building;;			
+		*);;
+		<- statement;;
+		=> nrel_main_idtf: [Утв. храм] (* <- lang_ru;; *);;
+		<= nrel_sc_text_translation: ... (*
+			-> rrel_example: [если сооружение, предназначенно для собрания прихожан и совершения религиозных обрядов, то это храм] (* <- lang_ru;; *);;
+		*);;
+	*);;
+
+The_Akshardham_Temple
+	<- concept_sandstone_temple;
+	<- concept_active_temple;
+	<- concept_hindu_temple;
+	<- 43_meters (*
+		<- concept_height;;
+		=> nrel_measurment_in_meters: 43 (* <- concept_number;; *);;
+		*);;
+
+nrel_measurment_in_meters <= nrel_inclusion: nrel_measurment;;		
+
+The_Parthenon
+	<- concept_granite_temple;
+	<- concept_inactive_temple;
+	<- concept_greko_roman_temple;
+	=> nrel_architectural_style: doric_order;;
+	
+The_Cheops_Pyramid
+	<- concept_limestone_temple;
+	<- concept_granite_temple;
+	<- concept_inactive_temple;
+	<- concept_egyptian_temple;;
