@@ -1,0 +1,28 @@
+section_document_templates
+=> nrel_main_idtf: [Раздел. Шаблоны юридических документов] (* <- lang_ru;; *);
+=> nrel_main_idtf: [Section. Templates for legal documents] (* <-lang_en;; *);
+=> nrel_main_idtf: [Раздзел. Шаблоны юрыдычных дакументаў] (* <- lang_by;; *);
+
+<= nrel_section_decomposition: {
+  section_procedural_document_templates;
+  section_personal_document_templates;
+  section_contract_document_templates
+};;
+
+
+section_procedural_document_templates
+=> nrel_main_idtf: [Раздел. Шаблоны процессуальных документов] (* <- lang_ru;; *);
+=> nrel_main_idtf: [Section. Templates of procedural documents] (* <-lang_en;; *);
+=> nrel_main_idtf: [Раздзел. Шаблоны працэсуальных  дакументаў] (* <- lang_by;; *);;
+
+
+section_personal_document_templates
+=> nrel_main_idtf: [Раздел. Шаблоны личных документов] (* <- lang_ru;; *);
+=> nrel_main_idtf: [Section. Templates for personal documents] (* <-lang_en;; *);
+=> nrel_main_idtf: [Раздзел. Шаблоны асабістых дакументаў] (* <- lang_by;; *);;
+
+
+section_contract_document_templates
+=> nrel_main_idtf: [Раздел. Шаблоны договорных документов] (* <- lang_ru;; *);
+=> nrel_main_idtf: [Section. Templates of contract documents] (* <-lang_en;; *);
+=> nrel_main_idtf: [Раздзел. Шаблоны дамоўных дакументаў] (* <- lang_by;; *);;
